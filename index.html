@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janane Sathiyanarayanan - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#2563eb',
+                        'secondary': '#f59e0b',
+                        'accent': '#10b981'
+                    },
+                    animation: {
+                        'fadeInUp': 'fadeInUp 0.6s ease-out forwards',
+                        'slideInLeft': 'slideInLeft 0.8s ease-out forwards',
+                        'slideInRight': 'slideInRight 0.8s ease-out forwards'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+        .animate-on-scroll {
+            opacity: 0;
+        }
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 scroll-smooth">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#home" class="text-2xl font-bold text-primary">Janane S.</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-primary transition-colors">Home</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-primary transition-colors">About</a>
+                    <a href="#education" class="nav-link text-gray-700 hover:text-primary transition-colors">Education</a>
+                    <a href="#skills" class="nav-link text-gray-700 hover:text-primary transition-colors">Skills</a>
+                    <a href="#experience" class="nav-link text-gray-700 hover:text-primary transition-colors">Experience</a>
+                    <a href="#projects" class="nav-link text-gray-700 hover:text-primary transition-colors">Projects</a>
+                    <a href="#certifications" class="nav-link text-gray-700 hover:text-primary transition-colors">Certifications</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-primary transition-colors">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="mobile-menu-button">
+                        <i class="fas fa-bars text-2xl text-gray-700"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden mobile-menu hidden bg-white">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 text-gray-700 hover:text-primary">Home</a>
+                <a href="#about" class="block px-3 py-2 text-gray-700 hover:text-primary">About</a>
+                <a href="#education" class="block px-3 py-2 text-gray-700 hover:text-primary">Education</a>
+                <a href="#skills" class="block px-3 py-2 text-gray-700 hover:text-primary">Skills</a>
+                <a href="#experience" class="block px-3 py-2 text-gray-700 hover:text-primary">Experience</a>
+                <a href="#projects" class="block px-3 py-2 text-gray-700 hover:text-primary">Projects</a>
+                <a href="#certifications" class="block px-3 py-2 text-gray-700 hover:text-primary">Certifications</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-primary">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-600 via-purple-600 to-blue-800 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-20"></div>
+        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8">
+            <div class="animate-on-scroll" data-animation="fadeInUp">
+                <h1 class="text-5xl md:text-7xl font-bold mb-4">Janane Sathiyanarayanan</h1>
+                <p class="text-xl md:text-2xl mb-8 text-gray-200">Aspiring Developer & AI Enthusiast</p>
+                <p class="text-lg md:text-xl mb-12 max-w-3xl mx-auto">MCA Student passionate about building smart, user-friendly, and highly functional applications</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#projects" class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+                        View My Work
+                    </a>
+                    <a href="#contact" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#about" class="text-white text-2xl">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4 animate-on-scroll" data-animation="fadeInUp">About Me</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-8 animate-on-scroll" data-animation="fadeInUp"></div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="animate-on-scroll" data-animation="slideInLeft">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Programming and Development" 
+                         class="rounded-lg shadow-xl w-full">
+                </div>
+                <div class="animate-on-scroll" data-animation="slideInRight">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">Hello! I'm Janane</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        I'm a passionate MCA student at SRM Institute of Science and Technology with a strong foundation in software development. 
+                        My journey in technology is driven by a desire to create smart, user-friendly, and visually appealing applications that make a difference.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        With expertise in Java, Python, and modern web technologies, I specialize in building responsive web applications and AI-powered solutions. 
+                        My recent work includes developing an AI chatbot for mental health support and creating innovative booking systems.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 text-center">
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-900">CGPA</h4>
+                            <p class="text-2xl font-bold text-primary">9.8</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-900">Projects</h4>
+                            <p class="text-2xl font-bold text-primary">5+</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4 animate-on-scroll" data-animation="fadeInUp">Education</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-8 animate-on-scroll" data-animation="fadeInUp"></div>
+            </div>
+            <div class="space-y-8">
+                <!-- MCA -->
+                <div class="bg-white rounded-lg shadow-lg p-8 animate-on-scroll" data-animation="slideInLeft">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between">
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Master of Computer Applications (MCA)</h3>
+                            <p class="text-xl text-primary font-medium mb-2">SRM Institute of Science and Technology, Tiruchirappalli</p>
+                            <p class="text-gray-600">2024 - 2026</p>
+                        </div>
+                        <div class="mt-4 md:mt-0 md:ml-8">
+                            <div class="bg-accent text-white px-6 py-2 rounded-full text-center">
+                                <span class="font-bold text-lg">CGPA: 9.8</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Bachelor's -->
+                <div class="bg-white rounded-lg shadow-lg p-8 animate-on-scroll" data-animation="slideInRight">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between">
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">BSc Electronics and Communication System</h3>
+                            <p class="text-xl text-primary font-medium mb-2">SASTRA Deemed University, Kumbakonam</p>
+                            <p class="text-gray-600">2020 - 2023</p>
+                        </div>
+                        <div class="mt-4 md:mt-0 md:ml-8">
+                            <div class="bg-secondary text-white px-6 py-2 rounded-full text-center">
+                                <span class="font-bold text-lg">CGPA: 7.5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- HSC -->
+                <div class="bg-white rounded-lg shadow-lg p-8 animate-on-scroll" data-animation="slideInLeft">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between">
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Higher Secondary Certificate (HSC)</h3>
+                            <p class="text-xl text-primary font-medium mb-2">Vellalar Matric HR Sec School, Thindal, Erode</p>
+                            <p class="text-gray-600">2019 - 2020</p>
+                        </div>
+                        <div class="mt-4 md:mt-0 md:ml-8">
+                            <div class="bg-blue-500 text-white px-6 py-2 rounded-full text-center">
+                                <span class="font-bold text-lg">64%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- SSLC -->
+                <div class="bg-white rounded-lg shadow-lg p-8 animate-on-scroll" data-animation="slideInRight">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between">
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Secondary School Leaving Certificate (SSLC)</h3>
+                            <p class="text-xl text-primary font-medium mb-2">Vellalar Matric HR Sec School, Thindal, Erode</p>
+                            <p class="text-gray-600">2017 - 2018</p>
+                        </div>
+                        <div class="mt-4 md:mt-0 md:ml-8">
+                            <div class="bg-purple-500 text-white px-6 py-2 rounded-full text-center">
+                                <span class="font-bold text-lg">85.8%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4 animate-on-scroll" data-animation="fadeInUp">Skills & Technologies</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-8 animate-on-scroll" data-animation="fadeInUp"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Programming Languages -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 animate-on-scroll" data-animation="fadeInUp">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Programming</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700">Java</span>
+                            <div class="flex space-x-1">
+                                <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
+                                <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
+                                <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
+                                <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700">Python</span>
+                            <div class="flex space-x-1">
+                                <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
+                                <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
+                                <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
+                                <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Frontend -->
+                <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-6 animate-on-scroll" data-animation="fadeInUp">
+                    <div class="text-green-600 text-4xl mb-4">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Frontend</h3>
+                    <div class="space-y-2">
+                        <span class="inline-block bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm">HTML</span>
+                        <span class="inline-block bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm">CSS</span>
+                        <span class="inline-block bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm">Tailwind CSS</span>
+                        <span class="inline-block bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                    </div>
+                </div>
+                
+                <!-- Database & Tools -->
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-6 animate-on-scroll" data-animation="fadeInUp">
+                    <div class="text-purple-600 text-4xl mb-4">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Database & Tools</h3>
+                    <div class="space-y-2">
+                        <span class="inline-block bg-purple-200 text-purple-800 px-3 py-1 rounded-full text-sm">MySQL</span>
+                        <span class="inline-block bg-purple-200 text-purple-800 px-3 py-1 rounded-full text-sm">Git</span>
+                        <span class="inline-block bg-purple-200 text-purple-800 px-3 py-1 rounded-full text-sm">GitHub</span>
+                    </div>
+                </div>
+                
+                <!-- Soft Skills -->
+                <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-lg p-6 animate-on-scroll" data-animation="fadeInUp">
+                    <div class="text-yellow-600 text-4xl mb-4">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Soft Skills</h3>
+                    <div class="space-y-2">
+                        <span class="inline-block bg-yellow-200 text-yellow-800 px-3 py-1 rounded-full text-sm">Problem Solving</span>
+                        <span class="inline-block bg-yellow-200 text-yellow-800 px-3 py-1 rounded-full text-sm">Quick Learner</span>
+                        <span class="inline-block bg-yellow-200 text-yellow-800 px-3 py-1 rounded-full text-sm">Team Work</span>
+                        <span class="inline-block bg-yellow-200 text-yellow-800 px-3 py-1 rounded-full text-sm">Reliable</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4 animate-on-scroll" data-animation="fadeInUp">Experience</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-8 animate-on-scroll" data-animation="fadeInUp"></div>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-8 animate-on-scroll" data-animation="slideInLeft">
+                <div class="flex flex-col lg:flex-row lg:items-center justify-between mb-6">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Web Development Intern</h3>
+                        <p class="text-xl text-primary font-medium mb-2">Vebbox Software Solution, Kumbakonam</p>
+                        <p class="text-gray-600">May 2025 - June 2025</p>
+                    </div>
+                    <div class="mt-4 lg:mt-0">
+                        <span class="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium">Internship</span>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="text-lg font-semibold text-gray-900">Key Accomplishments:</h4>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                            <span>Learned and practiced web development using HTML, CSS, and JavaScript</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                            <span>Created simple and responsive web pages with modern design principles</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                            <span>Gained practical knowledge of website development and team collaboration</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                            <span>Utilized GitHub for version control and code collaboration</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                            <span>Developed Tunespace - a complete music studio booking system</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4 animate-on-scroll" data-animation="fadeInUp">Featured Projects</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-8 animate-on-scroll" data-animation="fadeInUp"></div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Brightmind AI Chatbot -->
+                <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg shadow-lg overflow-hidden animate-on-scroll" data-animation="slideInLeft">
+                    <div class="p-8">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-500 text-white p-3 rounded-lg mr-4">
+                                <i class="fas fa-robot text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900">Brightmind AI Chatbot</h3>
+                                <p class="text-gray-600">Aug 2025 - Oct 2025</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            An adaptive AI-powered CBT chatbot designed for mental health support. Features multi-language support 
+                            for global usability and emergency notification system to alert trusted contacts during crisis situations.
+                        </p>
+                        <div class="mb-6">
+                            <h4 class="font-semibold text-gray-900 mb-3">Key Features:</h4>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i>AI-powered CBT therapy techniques</li>
+                                <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i>Multi-language support</li>
+                                <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i>Emergency alert system</li>
+                                <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i>Crisis detection algorithms</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">AI/ML</span>
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">NLP</span>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Python</span>
+                            <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Healthcare</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/janane-22" class="flex items-center text-primary hover:text-blue-700 transition-colors">
+                                <i class="fab fa-github mr-2"></i>View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tunespace -->
+                <div class="bg-gradient-to-br from-green-50 to-yellow-50 rounded-lg shadow-lg overflow-hidden animate-on-scroll" data-animation="slideInRight">
+                    <div class="p-8">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-green-500 text-white p-3 rounded-lg mr-4">
+                                <i class="fas fa-music text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900">Tunespace</h3>
+                                <p class="text-gray-600">Built during Internship</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            A comprehensive music studio booking system for Tamil Nadu. Features multiple studio classes with 
+                            different pricing tiers, professional equipment listings, and an intuitive booking interface.
+                        </p>
+                        <div class="mb-6">
+                            <h4 class="font-semibold text-gray-900 mb-3">Studio Classes:</h4>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-center"><i class="fas fa-star text-yellow-500 mr-2"></i>1st Class: ₹1,500/hour (Premium)</li>
+                                <li class="flex items-center"><i class="fas fa-star text-yellow-500 mr-2"></i>2nd Class: ₹800/hour (Popular)</li>
+                                <li class="flex items-center"><i class="fas fa-star text-yellow-500 mr-2"></i>3rd Class: ₹500/hour (Budget)</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">HTML</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">CSS</span>
+                            <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Responsive</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="https://janane-22.github.io/Tunespace/" class="flex items-center text-primary hover:text-blue-700 transition-colors">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                            <a href="https://github.com/janane-22" class="flex items-center text-primary hover:text-blue-700 transition-colors">
+                                <i class="fab fa-github mr-2"></i>View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4 animate-on-scroll" data-animation="fadeInUp">Certifications & Achievements</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-8 animate-on-scroll" data-animation="fadeInUp"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Database Management -->
+                <div class="bg-white rounded-lg shadow-lg p-6 animate-on-scroll" data-animation="fadeInUp">
+                    <div class="text-center">
+                        <div class="bg-blue-500 text-white p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-database text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Database Management System</h3>
+                        <p class="text-primary font-medium mb-4">GreatLearning</p>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Certified</span>
+                    </div>
+                </div>
+                
+                <!-- Java Collection API -->
+                <div class="bg-white rounded-lg shadow-lg p-6 animate-on-scroll" data-animation="fadeInUp">
+                    <div class="text-center">
+                        <div class="bg-orange-500 text-white p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <i class="fab fa-java text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Java Collection API</h3>
+                        <p class="text-primary font-medium mb-4">MercyTechnologies</p>
+                        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Certified</span>
+                    </div>
+                </div>
+                
+                <!-- Research Achievement -->
+                <div class="bg-white rounded-lg shadow-lg p-6 animate-on-scroll" data-animation="fadeInUp">
+                    <div class="text-center">
+                        <div class="bg-green-500 text-white p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-trophy text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Research Paper Presentation</h3>
+                        <p class="text-primary font-medium mb-4">SRM KTR Campus</p>
+                        <p class="text-sm text-gray-600 mb-4">Intelligent Flood Safety System: Real-Time Current Detection and Alert</p>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Achievement</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-blue-600 via-purple-600 to-blue-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 animate-on-scroll" data-animation="fadeInUp">Get In Touch</h2>
+                <div class="w-24 h-1 bg-white mx-auto mb-8 animate-on-scroll" data-animation="fadeInUp"></div>
+                <p class="text-xl text-gray-200 animate-on-scroll" data-animation="fadeInUp">Ready to collaborate? Let's build something amazing together!</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="animate-on-scroll" data-animation="slideInLeft">
+                    <h3 class="text-2xl font-semibold mb-8">Let's Connect</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <div class="bg-white bg-opacity-20 p-3 rounded-lg mr-4">
+                                <i class="fab fa-linkedin text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">LinkedIn</h4>
+                                <a href="https://www.linkedin.com/in/janane-sathiyanarayanan-416019359" class="text-gray-200 hover:text-white transition-colors">
+                                    Connect with me professionally
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-white bg-opacity-20 p-3 rounded-lg mr-4">
+                                <i class="fab fa-github text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">GitHub</h4>
+                                <a href="https://github.com/janane-22" class="text-gray-200 hover:text-white transition-colors">
+                                    Check out my repositories
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-white bg-opacity-20 p-3 rounded-lg mr-4">
+                                <i class="fas fa-graduation-cap text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Education</h4>
+                                <p class="text-gray-200">SRM Institute of Science and Technology</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="animate-on-scroll" data-animation="slideInRight">
+                    <form class="space-y-6" id="contactForm">
+                        <div>
+                            <label for="name" class="block text-sm font-medium mb-2">Name</label>
+                            <input type="text" id="name" name="name" required 
+                                   class="w-full px-4 py-3 bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                            <input type="email" id="email" name="email" required 
+                                   class="w-full px-4 py-3 bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" required 
+                                      class="w-full px-4 py-3 bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent"></textarea>
+                        </div>
+                        <button type="submit" 
+                                class="w-full bg-white text-blue-600 py-3 px-6 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p>&copy; 2025 Janane Sathiyanarayanan. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://www.linkedin.com/in/janane-sathiyanarayanan-416019359" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="https://github.com/janane-22" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
